@@ -1,2 +1,4 @@
 .idea
 activities
+secret.py
+__pycache__

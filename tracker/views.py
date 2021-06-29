@@ -7,6 +7,7 @@ from flask_wtf import FlaskForm, file
 
 from tracker.app import app, db
 from tracker.models import Track
+from tracker.secret import GOOGLE_MAP_KEY
 
 
 @app.route('/')
@@ -19,7 +20,7 @@ def index():
 
 @app.route('/track/<track_id>')
 def track(track_id):
-    return render_template('map.html', track=track_id)
+    return render_template('map.html', track=track_id, api_key=GOOGLE_MAP_KEY)
 
 
 @app.route('/track/xml/<track_name>')
