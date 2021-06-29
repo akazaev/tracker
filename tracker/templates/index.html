@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% for id, title in tracks.items() %}
+<a href="/track/{{ id }}">{{ title }}</a><br/>
+{% endfor %}
+{% endblock %}
